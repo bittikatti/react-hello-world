@@ -1,0 +1,29 @@
+*
+!.gitignore
+
+# Documentation
+!*.md
+!docs/
+
+# JSONS
+!*.json
+
+# Resources
+!public/
+!public/**
+
+# App code
+!src/
+!src/**
+
+## Scripts et al.
+!*.js
+!*.jsx
+!*.css
+!*.html
+
+# Test files
+!test/
+!test/**
+!*.py
+*.pyc
