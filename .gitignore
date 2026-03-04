@@ -21,3 +21,8 @@
 !*.jsx
 !*.css
 !*.html
+
+# Build file
+!.github/
+!.github/workflows/
+!.github/workflows/deploy.yml
