@@ -21,9 +21,3 @@
 !*.jsx
 !*.css
 !*.html
-
-# Test files
-!test/
-!test/**
-!*.py
-*.pyc
