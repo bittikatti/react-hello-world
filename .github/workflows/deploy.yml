@@ -12,6 +12,7 @@ on:
 # Only need read access to contents; no id-token required
 permissions:
   contents: read
+  pages: write
   id-token: write
 
 # Allow one concurrent deployment
