@@ -19,7 +19,7 @@ img {
   overflow: hidden;
 }
 .cat:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #f5f5cb);
 }
 
 @keyframes cat-spin {
