@@ -4,6 +4,8 @@ Done with vite using the following
 npm create vite@latest react-hello-world -- --template react
 ```
 
+Hosted by Github Pages in [here](https://bittikatti.github.io/react-hello-world/).
+
 ## Testing
 Start dev server:
 
