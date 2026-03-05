@@ -71,7 +71,7 @@ img {
   }
 
   .horizontal-movement {
-    left: 0;
+    position: relative;
     transform: none;
   }
 }
