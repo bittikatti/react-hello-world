@@ -6,11 +6,11 @@ function App() {
 
   return (
     <>
-      <div class="cat-container">
+      <div className="cat-container">
         <img src={catRoll} className="cat spin" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
       </div>
       <h1>Meow World!</h1>
-      <div class="cat-container" title="Cat is angry. Do not touch."> {/* The title is here because the cat is continuously moving*/}
+      <div className="cat-container" title="Cat is angry. Do not touch."> {/* The title is here because the cat is continuously moving*/}
         <img 
           src={ninjaCat}
           className="cat horizontal-movement"
