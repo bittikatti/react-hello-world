@@ -1,4 +1,7 @@
-[ ] Lots of cat images
-[ ] Rainbow coloured background
+[2 for now] Lots of cat images
+[X] Rainbow coloured background
 [X] Meow world! text
-[ ] What should the button do? Flip a cat? And count number of times a cat has been flipped?
+[ ] Clicking cat repeatedly angers the cat
+    [ ] Event listener per each cat
+[ ] Angry cat visual effect (background, clouds and lightnings?)
+[ ] Way to calm the cats and remove the effects
