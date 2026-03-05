@@ -36,7 +36,7 @@ img {
 }
 
 .horizontal-movement {
-  position: relative;
+  position: absolute;
   top: 4%;
   width: 100%;
   animation: slideAnimation 6s linear infinite;
