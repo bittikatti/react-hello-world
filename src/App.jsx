@@ -7,13 +7,13 @@ function App() {
   return (
     <>
       <div className="cat-container">
-        <button className="spin">
+        <button className="cat-button spin">
           <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
         </button>
       </div>
       <h1>Meow World!</h1>
       <div className="cat-container">
-        <button className="horizontal-movement">
+        <button className="cat-button horizontal-movement">
           <img 
             src={ninjaCat}
             className="cat"
