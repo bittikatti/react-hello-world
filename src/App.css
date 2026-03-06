@@ -27,7 +27,7 @@ img {
 /* Make the image inside cat-button class to go smaller to look like it was pressed */
 .cat-button:active img {
   transform: scale(0.92);
-  filter: drop-shadow(0 0 2em #d1d14e);
+  filter: drop-shadow(0 0 2em #d1d14e); /* Non-compliant, but decorative. Scaling is compliant. */
 }
 
 /* Default animations */
