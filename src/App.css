@@ -12,7 +12,9 @@ img {
 .cat-container {
   width: 100%;
   height: 200px;
-  padding: 1rem;
+  padding: 0.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   will-change: filter;
   transition: filter 300ms;
   display: block;
