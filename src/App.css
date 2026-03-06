@@ -97,3 +97,84 @@ Option 1: No movement if system settings say no. */
 .card {
   padding: 2em;
 }
+
+
+/* Weather CSS */
+.weather-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Sun with glow */
+.sun {
+  background: linear-gradient(
+    45deg,
+    rgb(248, 248, 67) 25%,
+    rgb(255, 242, 0)
+  );
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+
+  z-index: 1;
+  display: inline-block;
+  position: absolute;
+}
+
+.sun-glow {
+  animation: sunGlow 2s infinite;
+}
+
+@keyframes sunGlow {
+  0% {
+    filter: drop-shadow(0 0 1em yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 5em yellow);
+  }
+  100% {
+    filter: drop-shadow(0 0 1em yellow);
+  }
+}
+
+/* Cloud with movement */
+.cloud-container {
+  z-index: 2;
+  display: inline-block;
+}
+
+.horizontal-left-to-right-movement {
+  animation: leftToRight 6s infinite;
+}
+
+/* Use opacity to ease the appearance and disappearance on edges */
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Accessibility: do not move if system settings have no animation */
+@media (prefers-reduced-motion: reduce) {
+
+  .leftToRight {
+    animation: none;
+    position: relative;
+    transform: none;
+  }
+}
