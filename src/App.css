@@ -40,7 +40,6 @@ img {
 .horizontal-movement {
   position: absolute;
   top: auto; /*Align horizontal movement vertically to match parent's padding*/
-  width: 100%;
   animation: slideAnimation 6s linear infinite;
 }
 

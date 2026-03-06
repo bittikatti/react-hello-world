@@ -8,11 +8,11 @@ function App() {
     <>
       <div className="cat-container">
         <button className="spin">
-          <img src={catRoll} className="cat " alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
+          <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
         </button>
       </div>
       <h1>Meow World!</h1>
-      <div className="cat-container" title="Cat is angry. Do not touch."> {/* The title is here because the cat is continuously moving*/}
+      <div className="cat-container">
         <button className="horizontal-movement">
           <img 
             src={ninjaCat}
