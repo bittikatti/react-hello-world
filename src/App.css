@@ -105,6 +105,7 @@ Option 1: No movement if system settings say no. */
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  position: relative;
 }
 
 /* Sun with glow */
@@ -118,9 +119,7 @@ Option 1: No movement if system settings say no. */
   width: 160px;
   border-radius: 50%;
 
-  z-index: 1;
   display: inline-block;
-  position: absolute;
 }
 
 .sun-glow {
@@ -141,8 +140,9 @@ Option 1: No movement if system settings say no. */
 
 /* Cloud with movement */
 .cloud-container {
-  z-index: 2;
-  display: inline-block;
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
 }
 
 .horizontal-left-to-right-movement {
