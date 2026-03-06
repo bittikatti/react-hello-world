@@ -7,15 +7,19 @@ function App() {
   return (
     <>
       <div className="cat-container">
-        <img src={catRoll} className="cat spin" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
+        <button className="spin">
+          <img src={catRoll} className="cat " alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
+        </button>
       </div>
       <h1>Meow World!</h1>
       <div className="cat-container" title="Cat is angry. Do not touch."> {/* The title is here because the cat is continuously moving*/}
-        <img 
-          src={ninjaCat}
-          className="cat horizontal-movement"
-          alt="Cat in ninja position and claws out moving back and forth with one leg pointing forward like doing a ninja kick."
-          />
+        <button className="horizontal-movement">
+          <img 
+            src={ninjaCat}
+            className="cat"
+            alt="Cat in ninja position and claws out moving back and forth with one leg pointing forward like doing a ninja kick."
+            />
+        </button>
       </div>
     </>
   )
