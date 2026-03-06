@@ -17,6 +17,7 @@ img {
   transition: filter 300ms;
   display: block;
   overflow: hidden;
+  position: relative;
 }
 .cat:hover {
   filter: drop-shadow(0 0 1em #f5f5cb);
@@ -37,7 +38,7 @@ img {
 
 .horizontal-movement {
   position: absolute;
-  top: 4%;
+  top: auto; /*Align horizontal movement vertically to match parent's padding*/
   width: 100%;
   animation: slideAnimation 6s linear infinite;
 }
