@@ -119,6 +119,7 @@ Option 1: No movement if system settings say no. */
   width: 160px;
   border-radius: 50%;
 
+  z-index: 1;
   display: inline-block;
 }
 
@@ -143,10 +144,11 @@ Option 1: No movement if system settings say no. */
   position: absolute;
   top: 25%;
   transform: translateY(-50%);
+  z-index: 2;
 }
 
 .horizontal-left-to-right-movement {
-  animation: leftToRight 6s infinite;
+  animation: leftToRight 20s infinite; /* Clouds move really slow */
 }
 
 /* Use opacity to ease the appearance and disappearance on edges */
@@ -172,9 +174,18 @@ Option 1: No movement if system settings say no. */
 /* Accessibility: do not move if system settings have no animation */
 @media (prefers-reduced-motion: reduce) {
 
-  .leftToRight {
+  .horizontal-left-to-right-movement {
     animation: none;
-    position: relative;
     transform: none;
+  }
+
+  /* Place the cloud and give the sun a static glow to look more aesthetic */
+  .cloud-container {
+    left: 60%;
+  }
+
+  .sun-glow {
+    animation: none;
+    filter: drop-shadow(0 0 3em yellow);
   }
 }
