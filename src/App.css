@@ -9,6 +9,11 @@ img {
   max-width: 200px
 }
 
+.instructions {
+  padding: 2em;
+  text-align: left;
+}
+
 .cat-container {
   width: 100%;
   height: 200px;
@@ -92,12 +97,6 @@ Option 1: No movement if system settings say no. */
 .horizontal-movement:hover {
   animation-play-state: paused;
 }
-
-
-.card {
-  padding: 2em;
-}
-
 
 /* Weather CSS */
 .weather-container {

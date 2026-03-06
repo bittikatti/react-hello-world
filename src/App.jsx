@@ -1,12 +1,34 @@
+import { useState } from 'react'
 import catRoll from './assets/catRoll.png'
 import ninjaCat from './assets/ninjaCat.png'
+import fish from './assets/fish.svg'
 import './App.css'
 
 function App() {
-
+  const [disturbanceLevel, setCount] = useState(0)
   return (
     <>
       <h1>Meow World!</h1>
+      <div className='instructions'>
+        <p>
+          Avoid disturbing the cats by touching them too much.
+        </p>
+        <div className='cat-status-toolbar'>
+          {/* Cat disturbance status indicator */}
+          {/* TODO: left side */}
+          <div>
+            <p>Cat disturbance level: {disturbanceLevel} Maximum is 3.</p>
+          </div>
+
+          {/* TODO: right side */}
+          <div>
+            <p>Reduce with fish</p>
+            <button className='cat-button' onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}>
+              <img src={fish} alt="Fish" style={{height: "25px"}}/>
+            </button>
+          </div>
+        </div>
+      </div>
       <div className='weather-container'>
         {/* Container for sky effects */}
         {/* TODO Find an effective way to convey effects inside to screen reader. */}
@@ -21,12 +43,12 @@ function App() {
 
 
       <div className="cat-container">
-        <button className="cat-button spin">
+        <button className="cat-button spin" onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
           <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
         </button>
       </div>
       <div className="cat-container">
-        <button className="cat-button horizontal-movement">
+        <button className="cat-button horizontal-movement" onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
           <img 
             src={ninjaCat}
             className="cat"

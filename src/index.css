@@ -39,3 +39,17 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.fish-button {
+
+}
+
+.fish-button:hover {
+  filter: drop-shadow(0 0 1em #d1d14e);
+}
+
+/* Make the image inside cat-button class to go smaller to look like it was pressed */
+.fish-button:active img {
+  transform: scale(0.92);
+  filter: drop-shadow(0 0 2em #d1d14e); /* Non-compliant, but decorative. Scaling is compliant. */
+}
