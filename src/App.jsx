@@ -6,11 +6,7 @@ function App() {
 
   return (
     <>
-      <div className="cat-container">
-        <button className="cat-button spin">
-          <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
-        </button>
-      </div>
+      <h1>Meow World!</h1>
       <div className='weather-container'>
         {/* Container for sky effects */}
         {/* TODO Find an effective way to convey effects inside to screen reader. */}
@@ -22,7 +18,13 @@ function App() {
           </svg>
         </div>
       </div>
-      <h1>Meow World!</h1>
+
+
+      <div className="cat-container">
+        <button className="cat-button spin">
+          <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
+        </button>
+      </div>
       <div className="cat-container">
         <button className="cat-button horizontal-movement">
           <img 
