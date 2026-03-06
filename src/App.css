@@ -18,7 +18,6 @@ img {
   will-change: filter;
   transition: filter 300ms;
   display: block;
-  overflow: hidden;
   position: relative;
 }
 .cat:hover {

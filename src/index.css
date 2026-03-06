@@ -16,13 +16,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(
-    -230deg,
-    rgb(249, 144, 221) 8%,
-    rgb(231, 151, 2),
-    rgb(129, 189, 10),
+    -45deg,
     rgb(23, 182, 222),
-    rgb(205, 144, 249),
-    rgb(249, 144, 221)
+    rgb(154, 218, 235)
   );
 }
 
