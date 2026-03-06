@@ -18,6 +18,7 @@ function App() {
             src={ninjaCat}
             className="cat"
             alt="Cat in ninja position and claws out moving back and forth with one leg pointing forward like doing a ninja kick."
+            title="Cat is angry. Do not touch."
             />
         </button>
       </div>
