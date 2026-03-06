@@ -12,14 +12,22 @@ img {
 .cat-container {
   width: 100%;
   height: 200px;
-  padding: 1rem;
+  padding: 0.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   will-change: filter;
   transition: filter 300ms;
   display: block;
-  overflow: hidden;
+  position: relative;
 }
 .cat:hover {
-  filter: drop-shadow(0 0 1em #f5f5cb);
+  filter: drop-shadow(0 0 1em #d1d14e);
+}
+
+/* Make the image inside cat-button class to go smaller to look like it was pressed */
+.cat-button:active img {
+  transform: scale(0.92);
+  filter: drop-shadow(0 0 2em #d1d14e); /* Non-compliant, but decorative. Scaling is compliant. */
 }
 
 /* Default animations */
@@ -37,8 +45,7 @@ img {
 
 .horizontal-movement {
   position: absolute;
-  top: 4%;
-  width: 100%;
+  top: auto; /*Align horizontal movement vertically to match parent's padding*/
   animation: slideAnimation 6s linear infinite;
 }
 
@@ -65,7 +72,8 @@ img {
   }
 }
 
-/* Accessibility: respect reduced motion preference */
+/* Accessibility: respect reduced motion preference
+Option 1: No movement if system settings say no. */
 @media (prefers-reduced-motion: reduce) {
 
   .spin,
@@ -78,6 +86,95 @@ img {
     transform: none;
   }
 }
+
+/* Option 2: Pause movement on hover */
+.spin:hover,
+.horizontal-movement:hover {
+  animation-play-state: paused;
+}
+
+
 .card {
   padding: 2em;
+}
+
+
+/* Weather CSS */
+.weather-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Sun with glow */
+.sun {
+  background: linear-gradient(
+    45deg,
+    rgb(248, 248, 67) 25%,
+    rgb(255, 242, 0)
+  );
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+.sun-glow {
+  animation: sunGlow 2s infinite;
+}
+
+@keyframes sunGlow {
+  0% {
+    filter: drop-shadow(0 0 1em yellow);
+  }
+  50% {
+    filter: drop-shadow(0 0 5em yellow);
+  }
+  100% {
+    filter: drop-shadow(0 0 1em yellow);
+  }
+}
+
+/* Cloud with movement */
+.cloud-container {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+}
+
+.horizontal-left-to-right-movement {
+  animation: leftToRight 6s infinite;
+}
+
+/* Use opacity to ease the appearance and disappearance on edges */
+@keyframes leftToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Accessibility: do not move if system settings have no animation */
+@media (prefers-reduced-motion: reduce) {
+
+  .leftToRight {
+    animation: none;
+    position: relative;
+    transform: none;
+  }
 }
