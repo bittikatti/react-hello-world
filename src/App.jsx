@@ -13,7 +13,8 @@ function App() {
         <p>
           Avoid disturbing the cats by touching them too much.
         </p>
-        <div className='cat-status-toolbar'>
+      </div>
+      <div className='cat-status-toolbar'>
           {/* Cat disturbance status indicator */}
           {/* TODO: left side */}
           <div>
@@ -28,7 +29,6 @@ function App() {
             </button>
           </div>
         </div>
-      </div>
       <div className='weather-container'>
         {/* Container for sky effects */}
         {/* TODO Find an effective way to convey effects inside to screen reader. */}
