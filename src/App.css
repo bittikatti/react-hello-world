@@ -2,16 +2,10 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 img {
   max-width: 200px
-}
-
-.instructions {
-  padding: 2em;
-  text-align: left;
 }
 
 .cat-container {
