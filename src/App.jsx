@@ -23,7 +23,7 @@ function App() {
           {/* TODO: right side */}
           <div>
             <p>Reduce with fish</p>
-            <button className='cat-button' onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}>
+            <button className='fish-button' onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}>
               <img src={fish} alt="Fish" style={{height: "25px"}}/>
             </button>
           </div>
