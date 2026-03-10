@@ -35,8 +35,10 @@ function App() {
       <div className='cat-status-toolbar'>
           {/* Cat disturbance status indicator */}
           {/* TODO: left side */}
-          <div>
-            <p>Cat disturbance level: {disturbanceLevel} Maximum is 3.</p>
+          <div
+            aria-live='polite'
+            role='status'>
+            <p>Cat disturbance level is {disturbanceLevel}. Maximum is 3.</p>
           </div>
 
           {/* TODO: right side */}
