@@ -63,18 +63,22 @@ function App() {
       </div>
 
 
-      <div className="cat-container">
-        <button className="cat-button spin" onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
-          <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
+      <div className='cat-container'>
+        <button
+          className='cat-button spin'
+          aria-label='Click this button to touch the sleeping cat (aka god).'
+          onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
+            <img src={catRoll} className='cat' alt='Cat sleeping in a roll' title='God is sleeping. Do not touch.'/>
         </button>
       </div>
       <div className="cat-container">
         <button className="cat-button horizontal-movement" onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
           <img 
             src={ninjaCat}
-            className="cat"
-            alt="Cat in ninja position and claws out moving back and forth with one leg pointing forward like doing a ninja kick."
-            title="Cat is angry. Do not touch."
+            className='cat'
+            aria-label='Click this button to touch the aggressively moving ninja cat.'
+            alt='Cat in ninja position and claws out moving back and forth with one leg pointing forward like doing a ninja kick.'
+            title='Cat is angry. Do not touch.'
             />
         </button>
       </div>
