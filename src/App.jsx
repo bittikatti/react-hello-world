@@ -36,7 +36,6 @@ function App() {
           {/* Cat disturbance status indicator */}
           {/* TODO: left side */}
           <div
-            aria-live='polite'
             role='status'>
             <p>Cat disturbance level is {disturbanceLevel}. Maximum is 3.</p>
           </div>
