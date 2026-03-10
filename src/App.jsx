@@ -1,8 +1,21 @@
 import { useState } from 'react'
 import catRoll from './assets/catRoll.png'
 import ninjaCat from './assets/ninjaCat.png'
-import fish from './assets/fish.svg'
 import './App.css'
+
+function FishImage() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="55" viewBox="0 0 76 42">
+      <path
+        id="Selection"
+        fill="rgb(5, 5, 73)"
+        stroke="rgb(5, 5, 73)"
+        stroke-width="1"
+        d="M 76.00,34.00 C 70.01,32.01 67.27,28.31 64.58,28.46 62.54,28.57 55.02,34.10 52.00,35.48 38.26,41.78 31.21,43.65 17.00,37.14 12.26,34.96 -1.20,25.08 0.66,19.17 1.43,16.69 5.92,13.41 8.00,11.82 14.98,6.45 24.83,-0.40 34.00,0.32 44.50,1.16 47.48,4.81 56.00,9.78 58.45,11.21 63.39,15.16 66.00,15.14 68.25,15.11 73.16,11.28 76.00,10.00 76.00,10.00 74.02,22.42 74.02,22.42 74.02,22.42 76.00,34.00 76.00,34.00 Z"
+        />
+    </svg>
+  )
+}
 
 function App() {
   const [disturbanceLevel, setCount] = useState(0)
@@ -25,7 +38,7 @@ function App() {
           <div>
             <p>Reduce with fish</p>
             <button className='fish-button' onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}>
-              <img src={fish} alt="Fish" style={{height: "25px"}}/>
+              <FishImage />
             </button>
           </div>
         </div>
