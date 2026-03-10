@@ -3,14 +3,14 @@ import catRoll from './assets/catRoll.png'
 import ninjaCat from './assets/ninjaCat.png'
 import './App.css'
 
-function FishImage() {
+function FishImage({fishColor}) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="55" viewBox="0 0 76 42">
       <path
         id="Selection"
-        fill="rgb(5, 5, 73)"
-        stroke="rgb(5, 5, 73)"
-        stroke-width="1"
+        fill={fishColor}
+        stroke={fishColor}
+        strokeWidth="1"
         d="M 76.00,34.00 C 70.01,32.01 67.27,28.31 64.58,28.46 62.54,28.57 55.02,34.10 52.00,35.48 38.26,41.78 31.21,43.65 17.00,37.14 12.26,34.96 -1.20,25.08 0.66,19.17 1.43,16.69 5.92,13.41 8.00,11.82 14.98,6.45 24.83,-0.40 34.00,0.32 44.50,1.16 47.48,4.81 56.00,9.78 58.45,11.21 63.39,15.16 66.00,15.14 68.25,15.11 73.16,11.28 76.00,10.00 76.00,10.00 74.02,22.42 74.02,22.42 74.02,22.42 76.00,34.00 76.00,34.00 Z"
         />
     </svg>
@@ -19,6 +19,11 @@ function FishImage() {
 
 function App() {
   const [disturbanceLevel, setCount] = useState(0)
+
+  {/* Disable fish button if disturbance level is zero */}
+  {/* If fish button is disabled, change the fish color to gray */}
+  const fishIsDisabled = disturbanceLevel <= 0
+  const dynamicFishColor = fishIsDisabled ? "gray" : "rgb(5,5,73)"
   return (
     <>
       <h1>Meow World!</h1>
@@ -37,8 +42,11 @@ function App() {
           {/* TODO: right side */}
           <div>
             <p>Reduce with fish</p>
-            <button className='fish-button' onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}>
-              <FishImage />
+            <button
+              className='fish-button'
+              onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}
+              disabled={fishIsDisabled}>
+                <FishImage fishColor={dynamicFishColor}/>
             </button>
           </div>
         </div>
