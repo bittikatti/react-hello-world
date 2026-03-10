@@ -5,7 +5,7 @@ import './App.css'
 
 function FishImage({fishColor}) {
   return (
-    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='55' viewBox='0 0 76 42'>
+    <svg xmlns='http://www.w3.org/2000/svg' width='100' height='55' viewBox='0 0 76 42' aria-hidden="true">
       <path
         id='Selection'
         fill={fishColor}
