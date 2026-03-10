@@ -55,7 +55,7 @@ button:focus-visible {
 }
 
 /* Make the image inside cat-button class to go smaller to look like it was pressed */
-.fish-button:active img {
-  transform: scale(0.92);
+.fish-button:enabled:active svg {
+  transform: scale(0.92); /*There is a bug and the button is disabled the moment*/
   filter: drop-shadow(0 0 0.2em rgb(5, 5, 73)); /* Non-compliant, but decorative. Scaling is compliant. */
 }
