@@ -46,7 +46,7 @@ function App() {
             <p>Reduce with fish</p>
             <button
               className='fish-button'
-              aria-label='Click this fish button to feed the cat and reduce its disturbance level'
+              aria-label='Feed cat with fish'
               onClick={() => setCount((disturbanceLevel) => disturbanceLevel - 1)}
               disabled={fishIsDisabled}>
                 <FishImage fishColor={dynamicFishColor}/>
@@ -69,15 +69,15 @@ function App() {
       <div className='cat-container'>
         <button
           className='cat-button spin'
-          aria-label='Click this button to touch the sleeping cat (aka god).'
+          aria-label='Cat sleeping in a roll'
           onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
-            <img src={catRoll} className='cat' alt='Cat sleeping in a roll' title='God is sleeping. Do not touch.'/>
+            <img src={catRoll} className='cat' alt='Cat sleeping peacefully in a roll. Tip of the tongue sticks out between the lips.' title='God is sleeping. Do not touch.'/>
         </button>
       </div>
       <div className='cat-container'>
         <button
           className='cat-button horizontal-movement'
-          aria-label='Click this button to touch the aggressively moving ninja cat.'
+          aria-label='Aggressively moving cat'
           onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
           <img 
             src={ninjaCat}
