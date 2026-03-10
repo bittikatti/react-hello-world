@@ -18,6 +18,8 @@ img {
   transition: filter 300ms;
   display: block;
   position: relative;
+  align-items: center;
+  text-align: center;
 }
 .cat:hover {
   filter: drop-shadow(0 0 1em #d1d14e);

@@ -9,11 +9,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.center-items {
-  align-items: center;
-  text-align: center;
-}
-
 body {
   margin: 0;
   display: flex;

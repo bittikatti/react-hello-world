@@ -42,7 +42,7 @@ function App() {
       </div>
 
 
-      <div className="cat-container center-items">
+      <div className="cat-container">
         <button className="cat-button spin" onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
           <img src={catRoll} className="cat" alt="Cat sleeping in a roll" title="God is sleeping. Do not touch."/>
         </button>
