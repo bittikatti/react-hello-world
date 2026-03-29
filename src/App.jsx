@@ -22,8 +22,11 @@ function App() {
 
   {/* Disable fish button if disturbance level is zero */}
   {/* If fish button is disabled, change the fish color to gray */}
+  {/* If disturbancelevel  is more than three, the cat is angry */}
   const fishIsDisabled = disturbanceLevel <= 0
   const dynamicFishColor = fishIsDisabled ? 'gray' : 'rgb(5,5,73)'
+  const maxLevel = 3
+  const catLevel = disturbanceLevel <= maxLevel ? 'happy' : 'angry';
   return (
     <>
       <h1>Meow World!</h1>
@@ -37,7 +40,8 @@ function App() {
           {/* TODO: left side */}
           <div
             role='status'>
-            <p>Cat disturbance level is {disturbanceLevel}. Maximum is 3.</p>
+            <p>Cat disturbance level is {disturbanceLevel}. Maximum is {maxLevel}.</p>
+            <p>Cat is {catLevel}.</p>
           </div>
 
           {/* TODO: right side */}
