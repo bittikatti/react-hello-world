@@ -73,27 +73,35 @@ function App() {
         </div>
       </div>
 
-
+      {/* If disturbancelevel is max 3, show happy cat button. If not, show angry cat. */}
       <div className='cat-container'>
-        <button
-          className='cat-button spin'
-          aria-label='Cat sleeping in a roll'
-          onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
-            <img src={catRoll} className='cat' alt='Cat sleeping peacefully in a roll. Tip of the tongue sticks out between the lips.' title='God is sleeping. Do not touch.'/>
-        </button>
-      </div>
-      <div className='cat-container'>
-        <button
-          className='cat-button horizontal-movement'
-          aria-label='Aggressively moving cat'
-          onClick={() => setCount((disturbanceLevel) => disturbanceLevel + 1)}>
-          <img 
-            src={ninjaCat}
-            className='cat'
-            alt='Cat in ninja position and claws out moving back and forth with one leg pointing forward like doing a ninja kick.'
-            title='Cat is angry. Do not touch.'
+        {disturbanceLevel <= 3 ? (
+          <button
+            className='cat-button spin'
+            aria-label='Calm cat, safe to interact'
+            onClick={() => setCount((d) => d + 1)}
+          >
+            <img
+              src={catRoll}
+              className='cat'
+              alt='Cat sleeping peacefully in a roll'
+              aria-hidden='true' focusable='false'
             />
-        </button>
+          </button>
+        ) : (
+          <button
+            className='cat-button horizontal-movement'
+            aria-label='Angry cat, do not interact'
+            onClick={() => setCount((d) => d + 1)}
+          >
+            <img
+              src={ninjaCat}
+              className='cat'
+              alt='Angry cat with claws out in attack stance'
+              aria-hidden='true' focusable='false'
+            />
+          </button>
+        )}
       </div>
     </>
   )
